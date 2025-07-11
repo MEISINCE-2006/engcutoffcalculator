@@ -6,10 +6,10 @@ function calculateCutoff() {
 
   // Validate inputs
   if (isNaN(maths) || isNaN(physics) || isNaN(chemistry) ||
-      maths < 0 || maths > 200 ||
-      physics < 0 || physics > 200 ||
-      chemistry < 0 || chemistry > 200) {
-    resultCard.innerHTML = "⚠️ Please enter valid marks between 0 and 200 for all subjects.";
+      maths < 0 || maths >= 100||
+      physics < 0 || physics >= 100 ||
+      chemistry < 0 || chemistry >= 100) {
+    resultCard.innerHTML = "⚠️ Please enter valid marks between 0 and 100 for all subjects.";
     resultCard.classList.add('show');
     return;
   }
